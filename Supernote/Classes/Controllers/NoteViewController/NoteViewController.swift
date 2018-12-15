@@ -141,23 +141,7 @@ extension NoteViewController {
         do {
             let realm = try Realm()
         try realm.write {
-            
-            print("dasdasdsa")
-            
-            print(self.note) // nil
-            print(titleTextField.text)  // Optional("fdsfdsfdsfdsfdsfds")
-            print(noteTextView.text)    // Optional("fdsfdsfdsfdsf")
-            print(noteTextView.font?.fontName)    // Optional(<UICTFont: 0x7fe3fff1d160>
-                                        //      font-family: "Avenir-Book"; font-weight: normal; font-style: normal;                           font-size: 17.00pt)
-            print(colorPicker.selectedRow(inComponent: 0))   //nil
-            print(colorPicker.selectedRow(inComponent: 1))
-            print(colorPicker.selectedRow(inComponent: 2))
-            
-            
-            print(noteTextView.textAlignment.rawValue)   //
-            
             if let note = self.note {
-                print(loggedInUser?.notes.count)
                 loggedInUser?.notes.append(note)
             } else if let title = titleTextField.text,
                 let body = noteTextView.text,
@@ -165,16 +149,13 @@ extension NoteViewController {
                 let textColor = noteTextView.textColor,
                 let color = TextPropertiesMapper.textColorMapper[(textColor)],
                 let align = TextPropertiesMapper.textAlignmentMapper[noteTextView.textAlignment] {
-                print(loggedInUser?.notes.count)
                 loggedInUser?.notes.append(Note(title, body, font.fontName, Float(font.pointSize), color, align))
             }
         }
         } catch let error {
             print("Could not add message due to error:\n\(error)")
         }
-        
-        
-        
+
         print(loggedInUser!.notes.count)
     }
 }
