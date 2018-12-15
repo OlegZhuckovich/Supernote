@@ -39,8 +39,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        noteViewController.note = notes![indexPath.row - Constants.Cells.AdditionalCellsCount]
-        navigationController?.pushViewController(noteViewController, animated: true)
+        if indexPath.row != Constants.Cells.AdditionalCellNumber {
+            noteViewController.note = notes![indexPath.row - Constants.Cells.AdditionalCellsCount]
+            navigationController?.pushViewController(noteViewController, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

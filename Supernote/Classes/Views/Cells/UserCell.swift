@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import ImagePicker
+import IQKeyboardManagerSwift
 
 class UserCell: UITableViewCell, ImagePickerDelegate {
     
@@ -23,16 +24,17 @@ class UserCell: UITableViewCell, ImagePickerDelegate {
         super.awakeFromNib()
     }
     
-    
     @IBAction func showSettingsView(_ sender: Any) {
+        guard let homeViewController = self.superview?.parentContainerViewController() as? HomeViewController else { return }
+        let settingsViewController = UIStoryboard.initializeViewController(SettingsViewController.self)
+        
+        settingsViewController.loggedInUser = homeViewController.loggedInUser
+        homeViewController.navigationController?.pushViewController(settingsViewController, animated: true)
     }
-    
     
     @IBAction func choosePhoto(_ sender: Any) {
         self.window?.rootViewController!.present(setupImagePicker(), animated: true, completion: nil)
     }
-    
-    
     
     func setupImagePicker() -> ImagePickerController {
         var configuration = Configuration()

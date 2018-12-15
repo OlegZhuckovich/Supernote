@@ -35,6 +35,8 @@ class NoteViewController: UIViewController {
             }
             titleTextField.text = note.title
             noteTextView.text = note.body
+            
+            //здесь не устанавливается font
             noteTextView.font = UIFont(name: note.font, size: CGFloat(Int(note.fontSize)))
             noteTextView.textColor = TextPropertiesMapper.textColorMapper[note.color] ?? .black
             noteTextView.textAlignment = TextPropertiesMapper.textAlignmentMapper[note.align] ?? .left
@@ -140,16 +142,6 @@ extension NoteViewController {
 
     fileprivate func saveNoteToDatabase() {
         let realm = try! Realm()
-        
-        print(title)
-        print(noteTextView.text)
-        print(currentFont)
-        print(currentFontSize)
-        print(currentColor)
-        print(currentAlign)
-        
-        
-        
         try! realm.write {
             if let note = self.note {
                 loggedInUser?.notes.append(note)
@@ -183,4 +175,3 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
         return rhs < lhs
     }
 }
-
