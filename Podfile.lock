@@ -1,0 +1,59 @@
+PODS:
+  - ImagePicker (3.0.0)
+  - KIF (3.7.4):
+    - KIF/Core (= 3.7.4)
+  - KIF/Core (3.7.4)
+  - Nimble (5.0.0-alpha.30p1)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - Realm (3.12.0):
+    - Realm/Headers (= 3.12.0)
+  - Realm/Headers (3.12.0)
+  - RealmSwift (3.12.0):
+    - Realm (= 3.12.0)
+
+DEPENDENCIES:
+  - ImagePicker (= 3.0.0)
+  - KIF (from `https://github.com/kif-framework/KIF.git`, branch `master`)
+  - Nimble (from `https://github.com/Quick/Nimble.git`, commit `db706fc`)
+  - R.swift
+  - Realm
+  - RealmSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ImagePicker
+    - R.swift
+    - R.swift.Library
+    - Realm
+    - RealmSwift
+
+EXTERNAL SOURCES:
+  KIF:
+    :branch: master
+    :git: https://github.com/kif-framework/KIF.git
+  Nimble:
+    :commit: db706fc
+    :git: https://github.com/Quick/Nimble.git
+
+CHECKOUT OPTIONS:
+  KIF:
+    :commit: b0da3fe7fed1da0b5b9119b2d269d8e0528aa1cd
+    :git: https://github.com/kif-framework/KIF.git
+  Nimble:
+    :commit: db706fc
+    :git: https://github.com/Quick/Nimble.git
+
+SPEC CHECKSUMS:
+  ImagePicker: 973953c25960fe04729a7082a56194321c6762d2
+  KIF: f3d01c109ee9d1cfe6b0f2bb2aa278e807e971e2
+  Nimble: c5b995b4cd57789ec44b0cfb79640fc00e61a8c7
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
+  RealmSwift: 5576324033f0aa5ef1e0a839a3da2281dff47a7f
+
+PODFILE CHECKSUM: eb3fa8ba3e6c8c1d112e1c152ac22baa5e63b888
+
+COCOAPODS: 1.5.3

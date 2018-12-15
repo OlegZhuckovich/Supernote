@@ -1,0 +1,763 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18EEB43E1DB63DA0008D21CC /* KIF+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEB4341DB63DA0008D21CC /* KIF+Extensions.swift */; };
+		18EEB43F1DB63DA0008D21CC /* BaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEB4361DB63DA0008D21CC /* BaseUITests.swift */; };
+		18EEB4401DB63DA0008D21CC /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEB4371DB63DA0008D21CC /* HomeTests.swift */; };
+		18EEB4411DB63DA0008D21CC /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEB4381DB63DA0008D21CC /* LoginTests.swift */; };
+		18EEB4421DB63DA0008D21CC /* CommonSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEB43B1DB63DA0008D21CC /* CommonSteps.swift */; };
+		18EEB4441DB63DA0008D21CC /* LoginSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEB43D1DB63DA0008D21CC /* LoginSteps.swift */; };
+		18EEB4461DB63F02008D21CC /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEB4451DB63F02008D21CC /* UIColor+Extensions.swift */; };
+		22EF14DDF15A404DF89A5BA4 /* Pods_SupernoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AE23D87EBBF840145B78D8 /* Pods_SupernoteTests.framework */; };
+		7C16F5AD21BDE16B00AE48B2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C16F5AC21BDE16B00AE48B2 /* R.generated.swift */; };
+		7C1CFDAE21BC571D00B57C59 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1CFDAD21BC571D00B57C59 /* RegisterViewController.swift */; };
+		7C1CFDB021BC59D400B57C59 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1CFDAF21BC59D400B57C59 /* User.swift */; };
+		7C1CFDB221BD0ED000B57C59 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1CFDB121BD0ECF00B57C59 /* Constants.swift */; };
+		7C1CFDB421BD71B100B57C59 /* TextPropertiesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1CFDB321BD71B100B57C59 /* TextPropertiesMapper.swift */; };
+		7C1CFDB621BD9D3500B57C59 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1CFDB521BD9D3500B57C59 /* Temp.swift */; };
+		7C1CFDB821BD9D5A00B57C59 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C1CFDB721BD9D5A00B57C59 /* UserCell.xib */; };
+		7C1CFDBB21BDAB1700B57C59 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1CFDBA21BDAB1700B57C59 /* UserCell.swift */; };
+		7CC9B9D021C32164005BA024 /* NoteViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9B9CF21C32164005BA024 /* NoteViewControllerExtensions.swift */; };
+		7CF91C2621B4802B007125EE /* HomeSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF91C2421B47FD4007125EE /* HomeSteps.swift */; };
+		B4BDBEA3CC4EE25CCAE960BA /* Pods_Supernote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EB4A9EA8C16DA06C21CDAB /* Pods_Supernote.framework */; };
+		F3594B391D99FCC70046DA07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B381D99FCC70046DA07 /* AppDelegate.swift */; };
+		F3594B3E1D99FCC70046DA07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3594B3C1D99FCC70046DA07 /* Main.storyboard */; };
+		F3594B401D99FCC70046DA07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3594B3F1D99FCC70046DA07 /* Assets.xcassets */; };
+		F3594B431D99FCC70046DA07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3594B411D99FCC70046DA07 /* LaunchScreen.storyboard */; };
+		F3594B731D9B552D0046DA07 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B691D9B552D0046DA07 /* UIStoryboard+Extensions.swift */; };
+		F3594B741D9B552D0046DA07 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B6A1D9B552D0046DA07 /* UITableView+Extensions.swift */; };
+		F3594B751D9B552D0046DA07 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B6B1D9B552D0046DA07 /* UIViewController+Extensions.swift */; };
+		F3594B761D9B552D0046DA07 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B6D1D9B552D0046DA07 /* Note.swift */; };
+		F3594B771D9B552D0046DA07 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B6F1D9B552D0046DA07 /* HomeViewController.swift */; };
+		F3594B781D9B552D0046DA07 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B701D9B552D0046DA07 /* LoginViewController.swift */; };
+		F3594B791D9B552D0046DA07 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B711D9B552D0046DA07 /* NoteViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3594B4A1D99FCC70046DA07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3594B2D1D99FCC70046DA07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3594B341D99FCC70046DA07;
+			remoteInfo = SimpleNoteTakingApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18EEB4341DB63DA0008D21CC /* KIF+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KIF+Extensions.swift"; sourceTree = "<group>"; };
+		18EEB4361DB63DA0008D21CC /* BaseUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITests.swift; sourceTree = "<group>"; };
+		18EEB4371DB63DA0008D21CC /* HomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
+		18EEB4381DB63DA0008D21CC /* LoginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
+		18EEB4391DB63DA0008D21CC /* SupernoteTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SupernoteTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		18EEB43B1DB63DA0008D21CC /* CommonSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonSteps.swift; sourceTree = "<group>"; };
+		18EEB43D1DB63DA0008D21CC /* LoginSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSteps.swift; sourceTree = "<group>"; };
+		18EEB4451DB63F02008D21CC /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		3F44E807BB1B4985B2D60074 /* Pods-SupernoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SupernoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SupernoteTests/Pods-SupernoteTests.release.xcconfig"; sourceTree = "<group>"; };
+		5B198D6B59D0CDAC2E835DF9 /* Pods-SupernoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SupernoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SupernoteTests/Pods-SupernoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C16F5AC21BDE16B00AE48B2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = "Supernote/Supporting Files/R.generated.swift"; sourceTree = SOURCE_ROOT; };
+		7C1CFDAD21BC571D00B57C59 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		7C1CFDAF21BC59D400B57C59 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7C1CFDB121BD0ECF00B57C59 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7C1CFDB321BD71B100B57C59 /* TextPropertiesMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPropertiesMapper.swift; sourceTree = "<group>"; };
+		7C1CFDB521BD9D3500B57C59 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
+		7C1CFDB721BD9D5A00B57C59 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		7C1CFDBA21BDAB1700B57C59 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		7CC9B9CF21C32164005BA024 /* NoteViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewControllerExtensions.swift; sourceTree = "<group>"; };
+		7CF91C2421B47FD4007125EE /* HomeSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSteps.swift; sourceTree = "<group>"; };
+		888A21AF5D74F0870E6C8BDB /* Pods-Supernote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Supernote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Supernote/Pods-Supernote.debug.xcconfig"; sourceTree = "<group>"; };
+		8E709723FEE1AD94D3D33C84 /* Pods-Supernote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Supernote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Supernote/Pods-Supernote.release.xcconfig"; sourceTree = "<group>"; };
+		F0EB4A9EA8C16DA06C21CDAB /* Pods_Supernote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Supernote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3594B351D99FCC70046DA07 /* Supernote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Supernote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3594B381D99FCC70046DA07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3594B3D1D99FCC70046DA07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3594B3F1D99FCC70046DA07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3594B421D99FCC70046DA07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3594B441D99FCC70046DA07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3594B491D99FCC70046DA07 /* SupernoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SupernoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3594B4F1D99FCC70046DA07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3594B691D9B552D0046DA07 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
+		F3594B6A1D9B552D0046DA07 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		F3594B6B1D9B552D0046DA07 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		F3594B6D1D9B552D0046DA07 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		F3594B6F1D9B552D0046DA07 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F3594B701D9B552D0046DA07 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F3594B711D9B552D0046DA07 /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		F8AE23D87EBBF840145B78D8 /* Pods_SupernoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SupernoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3594B321D99FCC70046DA07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4BDBEA3CC4EE25CCAE960BA /* Pods_Supernote.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3594B461D99FCC70046DA07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22EF14DDF15A404DF89A5BA4 /* Pods_SupernoteTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18EEB4331DB63DA0008D21CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18EEB4341DB63DA0008D21CC /* KIF+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18EEB4351DB63DA0008D21CC /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				18EEB4361DB63DA0008D21CC /* BaseUITests.swift */,
+				18EEB4371DB63DA0008D21CC /* HomeTests.swift */,
+				18EEB4381DB63DA0008D21CC /* LoginTests.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		18EEB43A1DB63DA0008D21CC /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				18EEB43B1DB63DA0008D21CC /* CommonSteps.swift */,
+				7CF91C2421B47FD4007125EE /* HomeSteps.swift */,
+				18EEB43D1DB63DA0008D21CC /* LoginSteps.swift */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		5D736D7C893A816100D77578 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				888A21AF5D74F0870E6C8BDB /* Pods-Supernote.debug.xcconfig */,
+				8E709723FEE1AD94D3D33C84 /* Pods-Supernote.release.xcconfig */,
+				5B198D6B59D0CDAC2E835DF9 /* Pods-SupernoteTests.debug.xcconfig */,
+				3F44E807BB1B4985B2D60074 /* Pods-SupernoteTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7C1CFDB921BDAB0900B57C59 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7C1CFDB721BD9D5A00B57C59 /* UserCell.xib */,
+				7C1CFDBA21BDAB1700B57C59 /* UserCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7CC9B9CE21C3213B005BA024 /* NoteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3594B711D9B552D0046DA07 /* NoteViewController.swift */,
+				7CC9B9CF21C32164005BA024 /* NoteViewControllerExtensions.swift */,
+			);
+			path = NoteViewController;
+			sourceTree = "<group>";
+		};
+		7CE123E221C521D600AE5D00 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3594B3F1D99FCC70046DA07 /* Assets.xcassets */,
+				F3594B411D99FCC70046DA07 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7CE123E321C5228600AE5D00 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F3594B381D99FCC70046DA07 /* AppDelegate.swift */,
+				F3594B6E1D9B552D0046DA07 /* Controllers */,
+				F3594B6C1D9B552D0046DA07 /* Models */,
+				7C1CFDB921BDAB0900B57C59 /* Cells */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7CE123E421C522F200AE5D00 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C1CFDB121BD0ECF00B57C59 /* Constants.swift */,
+				7C1CFDB321BD71B100B57C59 /* TextPropertiesMapper.swift */,
+				7C16F5AC21BDE16B00AE48B2 /* R.generated.swift */,
+				F3594B441D99FCC70046DA07 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4A9C070A74F8EFCC7D2A5B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0EB4A9EA8C16DA06C21CDAB /* Pods_Supernote.framework */,
+				F8AE23D87EBBF840145B78D8 /* Pods_SupernoteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3594B2C1D99FCC70046DA07 = {
+			isa = PBXGroup;
+			children = (
+				F3594B371D99FCC70046DA07 /* Supernote */,
+				F3594B4C1D99FCC70046DA07 /* SupernoteTests */,
+				F3594B361D99FCC70046DA07 /* Products */,
+				5D736D7C893A816100D77578 /* Pods */,
+				D4A9C070A74F8EFCC7D2A5B9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F3594B361D99FCC70046DA07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3594B351D99FCC70046DA07 /* Supernote.app */,
+				F3594B491D99FCC70046DA07 /* SupernoteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3594B371D99FCC70046DA07 /* Supernote */ = {
+			isa = PBXGroup;
+			children = (
+				7CE123E321C5228600AE5D00 /* Classes */,
+				7CE123E221C521D600AE5D00 /* Resources */,
+				7CE123E421C522F200AE5D00 /* Supporting Files */,
+				F3594B681D9B552D0046DA07 /* Extensions */,
+				F3594B3C1D99FCC70046DA07 /* Main.storyboard */,
+				7C1CFDB521BD9D3500B57C59 /* Temp.swift */,
+			);
+			path = Supernote;
+			sourceTree = "<group>";
+		};
+		F3594B4C1D99FCC70046DA07 /* SupernoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				18EEB4331DB63DA0008D21CC /* Extensions */,
+				18EEB4351DB63DA0008D21CC /* Features */,
+				18EEB4391DB63DA0008D21CC /* SupernoteTests-Bridging-Header.h */,
+				18EEB43A1DB63DA0008D21CC /* Steps */,
+				F3594B4F1D99FCC70046DA07 /* Info.plist */,
+			);
+			path = SupernoteTests;
+			sourceTree = "<group>";
+		};
+		F3594B681D9B552D0046DA07 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18EEB4451DB63F02008D21CC /* UIColor+Extensions.swift */,
+				F3594B691D9B552D0046DA07 /* UIStoryboard+Extensions.swift */,
+				F3594B6A1D9B552D0046DA07 /* UITableView+Extensions.swift */,
+				F3594B6B1D9B552D0046DA07 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F3594B6C1D9B552D0046DA07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3594B6D1D9B552D0046DA07 /* Note.swift */,
+				7C1CFDAF21BC59D400B57C59 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3594B6E1D9B552D0046DA07 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7CC9B9CE21C3213B005BA024 /* NoteViewController */,
+				7C1CFDAD21BC571D00B57C59 /* RegisterViewController.swift */,
+				F3594B701D9B552D0046DA07 /* LoginViewController.swift */,
+				F3594B6F1D9B552D0046DA07 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3594B341D99FCC70046DA07 /* Supernote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3594B521D99FCC70046DA07 /* Build configuration list for PBXNativeTarget "Supernote" */;
+			buildPhases = (
+				88A878855F7732027D1B890A /* [CP] Check Pods Manifest.lock */,
+				7C16F5AB21BDDE2300AE48B2 /* R.swift */,
+				F3594B311D99FCC70046DA07 /* Sources */,
+				F3594B321D99FCC70046DA07 /* Frameworks */,
+				F3594B331D99FCC70046DA07 /* Resources */,
+				30115CD48354D9D4838826B1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Supernote;
+			productName = SimpleNoteTakingApp;
+			productReference = F3594B351D99FCC70046DA07 /* Supernote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3594B481D99FCC70046DA07 /* SupernoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3594B551D99FCC70046DA07 /* Build configuration list for PBXNativeTarget "SupernoteTests" */;
+			buildPhases = (
+				E4811C5731B5E615A9E9B55F /* [CP] Check Pods Manifest.lock */,
+				F3594B451D99FCC70046DA07 /* Sources */,
+				F3594B461D99FCC70046DA07 /* Frameworks */,
+				F3594B471D99FCC70046DA07 /* Resources */,
+				F42A5C0A1DA475D09D0AF6AF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3594B4B1D99FCC70046DA07 /* PBXTargetDependency */,
+			);
+			name = SupernoteTests;
+			productName = SimpleNoteTakingAppTests;
+			productReference = F3594B491D99FCC70046DA07 /* SupernoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3594B2D1D99FCC70046DA07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Supernote;
+				TargetAttributes = {
+					F3594B341D99FCC70046DA07 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4733UX5LXD;
+						LastSwiftMigration = 0800;
+					};
+					F3594B481D99FCC70046DA07 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4733UX5LXD;
+						LastSwiftMigration = 0800;
+						TestTargetID = F3594B341D99FCC70046DA07;
+					};
+				};
+			};
+			buildConfigurationList = F3594B301D99FCC70046DA07 /* Build configuration list for PBXProject "Supernote" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3594B2C1D99FCC70046DA07;
+			productRefGroup = F3594B361D99FCC70046DA07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3594B341D99FCC70046DA07 /* Supernote */,
+				F3594B481D99FCC70046DA07 /* SupernoteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3594B331D99FCC70046DA07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C1CFDB821BD9D5A00B57C59 /* UserCell.xib in Resources */,
+				F3594B431D99FCC70046DA07 /* LaunchScreen.storyboard in Resources */,
+				F3594B401D99FCC70046DA07 /* Assets.xcassets in Resources */,
+				F3594B3E1D99FCC70046DA07 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3594B471D99FCC70046DA07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30115CD48354D9D4838826B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Supernote/Pods-Supernote-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Supernote/Pods-Supernote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C16F5AB21BDDE2300AE48B2 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"\n";
+		};
+		88A878855F7732027D1B890A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Supernote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4811C5731B5E615A9E9B55F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SupernoteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F42A5C0A1DA475D09D0AF6AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SupernoteTests/Pods-SupernoteTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SupernoteTests/Pods-SupernoteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3594B311D99FCC70046DA07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3594B731D9B552D0046DA07 /* UIStoryboard+Extensions.swift in Sources */,
+				7C1CFDAE21BC571D00B57C59 /* RegisterViewController.swift in Sources */,
+				18EEB4461DB63F02008D21CC /* UIColor+Extensions.swift in Sources */,
+				F3594B391D99FCC70046DA07 /* AppDelegate.swift in Sources */,
+				7C1CFDB421BD71B100B57C59 /* TextPropertiesMapper.swift in Sources */,
+				F3594B751D9B552D0046DA07 /* UIViewController+Extensions.swift in Sources */,
+				F3594B791D9B552D0046DA07 /* NoteViewController.swift in Sources */,
+				7C1CFDB621BD9D3500B57C59 /* Temp.swift in Sources */,
+				7C1CFDBB21BDAB1700B57C59 /* UserCell.swift in Sources */,
+				7C1CFDB221BD0ED000B57C59 /* Constants.swift in Sources */,
+				F3594B781D9B552D0046DA07 /* LoginViewController.swift in Sources */,
+				7C16F5AD21BDE16B00AE48B2 /* R.generated.swift in Sources */,
+				7CC9B9D021C32164005BA024 /* NoteViewControllerExtensions.swift in Sources */,
+				7C1CFDB021BC59D400B57C59 /* User.swift in Sources */,
+				F3594B741D9B552D0046DA07 /* UITableView+Extensions.swift in Sources */,
+				F3594B771D9B552D0046DA07 /* HomeViewController.swift in Sources */,
+				F3594B761D9B552D0046DA07 /* Note.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3594B451D99FCC70046DA07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18EEB43F1DB63DA0008D21CC /* BaseUITests.swift in Sources */,
+				18EEB4401DB63DA0008D21CC /* HomeTests.swift in Sources */,
+				18EEB43E1DB63DA0008D21CC /* KIF+Extensions.swift in Sources */,
+				7CF91C2621B4802B007125EE /* HomeSteps.swift in Sources */,
+				18EEB4421DB63DA0008D21CC /* CommonSteps.swift in Sources */,
+				18EEB4441DB63DA0008D21CC /* LoginSteps.swift in Sources */,
+				18EEB4411DB63DA0008D21CC /* LoginTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3594B4B1D99FCC70046DA07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3594B341D99FCC70046DA07 /* Supernote */;
+			targetProxy = F3594B4A1D99FCC70046DA07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3594B3C1D99FCC70046DA07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3594B3D1D99FCC70046DA07 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F3594B411D99FCC70046DA07 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3594B421D99FCC70046DA07 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3594B501D99FCC70046DA07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3594B511D99FCC70046DA07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3594B531D99FCC70046DA07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 888A21AF5D74F0870E6C8BDB /* Pods-Supernote.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4733UX5LXD;
+				INFOPLIST_FILE = "$(SRCROOT)/Supernote/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epam.Supernote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		F3594B541D99FCC70046DA07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E709723FEE1AD94D3D33C84 /* Pods-Supernote.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4733UX5LXD;
+				INFOPLIST_FILE = "$(SRCROOT)/Supernote/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epam.Supernote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		F3594B561D99FCC70046DA07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B198D6B59D0CDAC2E835DF9 /* Pods-SupernoteTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4733UX5LXD;
+				INFOPLIST_FILE = SupernoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epam.SupernoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Supernote.app/Supernote";
+			};
+			name = Debug;
+		};
+		F3594B571D99FCC70046DA07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F44E807BB1B4985B2D60074 /* Pods-SupernoteTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4733UX5LXD;
+				INFOPLIST_FILE = SupernoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epam.SupernoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Supernote.app/Supernote";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3594B301D99FCC70046DA07 /* Build configuration list for PBXProject "Supernote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3594B501D99FCC70046DA07 /* Debug */,
+				F3594B511D99FCC70046DA07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3594B521D99FCC70046DA07 /* Build configuration list for PBXNativeTarget "Supernote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3594B531D99FCC70046DA07 /* Debug */,
+				F3594B541D99FCC70046DA07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3594B551D99FCC70046DA07 /* Build configuration list for PBXNativeTarget "SupernoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3594B561D99FCC70046DA07 /* Debug */,
+				F3594B571D99FCC70046DA07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3594B2D1D99FCC70046DA07 /* Project object */;
+}
