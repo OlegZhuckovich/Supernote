@@ -11,19 +11,26 @@ import UIKit
 
 struct Constants {
     
+    struct Cells {
+        static let AdditionalCellNumber = 0
+        static let AdditionalCellsCount = 1
+        static let AdditionalCellsHeight = 80
+        static let ReuseIDCellsHeight = 60
+        static let ReuseID = "reuseID"
+        static let OneNoteLabel = "1 note"
+    }
+    
     struct TextProperties {
         static let Fonts = ["Avenir", "HelveticaNeue", "Futura", "Papyrus", "Optima", "Noteworthy", "Symbol", "Courier New", "Chalkboard SE", "Bodoni 72"]
-        static let Colors = ["Black": UIColor.black,
-                             "Red": UIColor.red,
-                             "Blue": UIColor.blue,
-                             "Magenta": UIColor.magenta,
-                             "Brown": UIColor.brown]
         static let Sizes = ["12", "14", "16", "18", "20"]
+        static let Color = ["Black", "Red", "Blue", "Magenta", "Brown"]
+        static let Align = ["Center", "Justified", "Left", "Right", "Natural"]
         
         struct Default {
             static let Font = "Avenir"
             static let Color = "Black"
             static let Size = "14"
+            static let Align = "Left"
         }
     }
     

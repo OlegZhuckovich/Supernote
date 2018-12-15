@@ -21,7 +21,7 @@ extension NoteViewController:  UIPickerViewDataSource, UIPickerViewDelegate {
             noteTextView.font = UIFont(name: fonts[row], size: (noteTextView.font?.pointSize)!)
         case 2:
             currentColor = colors[row]
-            noteTextView.textColor = Constants.TextProperties.Colors[colors[row]]
+            noteTextView.textColor = TextPropertiesMapper.textColorMapper[colors[row]]
         default:
             currentFontSize = sizes[row]
             noteTextView.font = UIFont(name: (noteTextView.font?.fontName)!, size: CGFloat(Int(sizes[row])!))

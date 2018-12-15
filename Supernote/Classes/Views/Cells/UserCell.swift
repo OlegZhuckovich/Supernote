@@ -12,15 +12,12 @@ import ImagePicker
 
 class UserCell: UITableViewCell, ImagePickerDelegate {
     
-    
     @IBOutlet weak var nameSurnameLabel: UILabel!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var photoButton: UIButton!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var notesLabel: UILabel!
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

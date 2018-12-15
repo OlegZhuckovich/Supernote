@@ -24,6 +24,7 @@
 		7C1CFDB821BD9D5A00B57C59 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C1CFDB721BD9D5A00B57C59 /* UserCell.xib */; };
 		7C1CFDBB21BDAB1700B57C59 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1CFDBA21BDAB1700B57C59 /* UserCell.swift */; };
 		7CC9B9D021C32164005BA024 /* NoteViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9B9CF21C32164005BA024 /* NoteViewControllerExtensions.swift */; };
+		7CE123E721C54B0800AE5D00 /* HomeViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE123E621C54B0800AE5D00 /* HomeViewControllerExtensions.swift */; };
 		7CF91C2621B4802B007125EE /* HomeSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF91C2421B47FD4007125EE /* HomeSteps.swift */; };
 		B4BDBEA3CC4EE25CCAE960BA /* Pods_Supernote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EB4A9EA8C16DA06C21CDAB /* Pods_Supernote.framework */; };
 		F3594B391D99FCC70046DA07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B381D99FCC70046DA07 /* AppDelegate.swift */; };
@@ -69,6 +70,7 @@
 		7C1CFDB721BD9D5A00B57C59 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		7C1CFDBA21BDAB1700B57C59 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		7CC9B9CF21C32164005BA024 /* NoteViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewControllerExtensions.swift; sourceTree = "<group>"; };
+		7CE123E621C54B0800AE5D00 /* HomeViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerExtensions.swift; sourceTree = "<group>"; };
 		7CF91C2421B47FD4007125EE /* HomeSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSteps.swift; sourceTree = "<group>"; };
 		888A21AF5D74F0870E6C8BDB /* Pods-Supernote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Supernote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Supernote/Pods-Supernote.debug.xcconfig"; sourceTree = "<group>"; };
 		8E709723FEE1AD94D3D33C84 /* Pods-Supernote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Supernote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Supernote/Pods-Supernote.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,7 +185,7 @@
 				F3594B381D99FCC70046DA07 /* AppDelegate.swift */,
 				F3594B6E1D9B552D0046DA07 /* Controllers */,
 				F3594B6C1D9B552D0046DA07 /* Models */,
-				7C1CFDB921BDAB0900B57C59 /* Cells */,
+				7CE123E521C549BC00AE5D00 /* Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -197,6 +199,24 @@
 				F3594B441D99FCC70046DA07 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7CE123E521C549BC00AE5D00 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3594B3C1D99FCC70046DA07 /* Main.storyboard */,
+				7C1CFDB921BDAB0900B57C59 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7CE123E821C54B6400AE5D00 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3594B6F1D9B552D0046DA07 /* HomeViewController.swift */,
+				7CE123E621C54B0800AE5D00 /* HomeViewControllerExtensions.swift */,
+			);
+			path = HomeViewController;
 			sourceTree = "<group>";
 		};
 		D4A9C070A74F8EFCC7D2A5B9 /* Frameworks */ = {
@@ -235,7 +255,6 @@
 				7CE123E221C521D600AE5D00 /* Resources */,
 				7CE123E421C522F200AE5D00 /* Supporting Files */,
 				F3594B681D9B552D0046DA07 /* Extensions */,
-				F3594B3C1D99FCC70046DA07 /* Main.storyboard */,
 				7C1CFDB521BD9D3500B57C59 /* Temp.swift */,
 			);
 			path = Supernote;
@@ -277,9 +296,9 @@
 			isa = PBXGroup;
 			children = (
 				7CC9B9CE21C3213B005BA024 /* NoteViewController */,
+				7CE123E821C54B6400AE5D00 /* HomeViewController */,
 				7C1CFDAD21BC571D00B57C59 /* RegisterViewController.swift */,
 				F3594B701D9B552D0046DA07 /* LoginViewController.swift */,
-				F3594B6F1D9B552D0046DA07 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -526,6 +545,7 @@
 				F3594B781D9B552D0046DA07 /* LoginViewController.swift in Sources */,
 				7C16F5AD21BDE16B00AE48B2 /* R.generated.swift in Sources */,
 				7CC9B9D021C32164005BA024 /* NoteViewControllerExtensions.swift in Sources */,
+				7CE123E721C54B0800AE5D00 /* HomeViewControllerExtensions.swift in Sources */,
 				7C1CFDB021BC59D400B57C59 /* User.swift in Sources */,
 				F3594B741D9B552D0046DA07 /* UITableView+Extensions.swift in Sources */,
 				F3594B771D9B552D0046DA07 /* HomeViewController.swift in Sources */,
@@ -672,7 +692,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4733UX5LXD;
-				INFOPLIST_FILE = "$(SRCROOT)/Supernote/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supernote/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.epam.Supernote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -687,7 +707,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4733UX5LXD;
-				INFOPLIST_FILE = "$(SRCROOT)/Supernote/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supernote/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.epam.Supernote;
 				PRODUCT_NAME = "$(TARGET_NAME)";

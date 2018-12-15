@@ -32,6 +32,11 @@ class LoginViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
+    
+    func clearUserData() {
+        usernameTextField.text = ""
+        passwordTextField.text = ""
+    }
 
     @IBAction func onTapLoginButton(_ sender: AnyObject) {
         
@@ -46,9 +51,12 @@ class LoginViewController: UIViewController {
 
         let realm = try! Realm()
         if let loggedInUser = realm.objects(User.self).filter("username = '\(username)' AND password = '\(password)'").first {
-            
             print(loggedInUser.notes.count)
             self.loggedInUser = loggedInUser
+            print(loggedInUser.username)
+            print(loggedInUser.notes.count)
+            clearUserData()
+            homeViewController.loggedInUser = self.loggedInUser
             navigationController?.pushViewController(homeViewController, animated: true)
         } else {
             showWarningAlertWithMessage(Constants.Alerts.WrongUserdataWarning)

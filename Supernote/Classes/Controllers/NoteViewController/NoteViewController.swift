@@ -31,13 +31,13 @@ class NoteViewController: UIViewController {
             guard titleTextField != nil, noteTextView != nil,
                 let note = note else {
                     navigationItem.rightBarButtonItem?.title = "Create"
-                    return }
-            
+                    return
+            }
             titleTextField.text = note.title
             noteTextView.text = note.body
-            noteTextView.textColor = (TextPropertiesMapper.textColorMapper.allKeys(forValue: note.color)).first
-            noteTextView.textAlignment = (TextPropertiesMapper.textAlignmentMapper.allKeys(forValue: note.align)).first!
-            
+            noteTextView.font = UIFont(name: note.font, size: CGFloat(Int(note.fontSize)))
+            noteTextView.textColor = TextPropertiesMapper.textColorMapper[note.color] ?? .black
+            noteTextView.textAlignment = TextPropertiesMapper.textAlignmentMapper[note.align] ?? .left
             navigationItem.rightBarButtonItem?.title = "Update"
             onNoteTitleTextFieldChanged(titleTextField)
         }
@@ -49,9 +49,10 @@ class NoteViewController: UIViewController {
     var colors = [] as [String]
     var sizes = [] as [String]
     
-    var currentFont = "Avenir"
-    var currentColor = "Black"
-    var currentFontSize = "14"
+    var currentFont = Constants.TextProperties.Default.Font
+    var currentFontSize = Constants.TextProperties.Default.Size
+    var currentColor = Constants.TextProperties.Default.Color
+    var currentAlign = Constants.TextProperties.Default.Align
     
     var isAlignSectionCollapse: Bool = true
     
@@ -68,18 +69,22 @@ class NoteViewController: UIViewController {
     }
     
     @IBAction func leftTextAlign(_ sender: Any) {
+        currentAlign = TextPropertiesMapper.textAlignmentMapper.allKeys(forValue: .left).first!
         noteTextView.textAlignment = .left
     }
     
     @IBAction func centerTextAlign(_ sender: Any) {
+        currentAlign = TextPropertiesMapper.textAlignmentMapper.allKeys(forValue: .center).first!
         noteTextView.textAlignment = .center
     }
     
     @IBAction func rightTextAlign(_ sender: Any) {
+        currentAlign = TextPropertiesMapper.textAlignmentMapper.allKeys(forValue: .right).first!
         noteTextView.textAlignment = .right
     }
     
     @IBAction func justifyTextAlign(_ sender: Any) {
+        currentAlign = TextPropertiesMapper.textAlignmentMapper.allKeys(forValue: .justified).first!
         noteTextView.textAlignment = .justified
     }
     
@@ -105,7 +110,7 @@ class NoteViewController: UIViewController {
     
     func setupPickers() {
         fonts = Constants.TextProperties.Fonts
-        colors = Array(Constants.TextProperties.Colors.keys)
+        colors = Array(TextPropertiesMapper.textColorMapper.keys)
         sizes = Constants.TextProperties.Sizes
     }
 
@@ -121,7 +126,6 @@ class NoteViewController: UIViewController {
 
 }
 
-
 extension NoteViewController {
     fileprivate func setupNavigationButtons() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create", style: .plain, target: self, action: #selector(NoteViewController.onTapCreateButton))
@@ -135,25 +139,25 @@ extension NoteViewController {
     }
 
     fileprivate func saveNoteToDatabase() {
+        let realm = try! Realm()
         
-
+        print(title)
+        print(noteTextView.text)
+        print(currentFont)
+        print(currentFontSize)
+        print(currentColor)
+        print(currentAlign)
         
-        do {
-            let realm = try Realm()
-        try realm.write {
+        
+        
+        try! realm.write {
             if let note = self.note {
                 loggedInUser?.notes.append(note)
             } else if let title = titleTextField.text,
                 let body = noteTextView.text,
-                let font = noteTextView.font,
-                let textColor = noteTextView.textColor,
-                let color = TextPropertiesMapper.textColorMapper[(textColor)],
-                let align = TextPropertiesMapper.textAlignmentMapper[noteTextView.textAlignment] {
-                loggedInUser?.notes.append(Note(title, body, font.fontName, Float(font.pointSize), color, align))
+                let currentFontSize = Float(currentFontSize) {
+                loggedInUser?.notes.append(Note(title, body, currentFont, currentFontSize, currentColor, currentAlign))
             }
-        }
-        } catch let error {
-            print("Could not add message due to error:\n\(error)")
         }
 
         print(loggedInUser!.notes.count)

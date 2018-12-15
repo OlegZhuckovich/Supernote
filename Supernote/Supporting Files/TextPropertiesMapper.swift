@@ -12,19 +12,19 @@ import UIKit
 class TextPropertiesMapper {
     
     static let textAlignmentMapper = [
-        NSTextAlignment.center : "center",
-        NSTextAlignment.justified : "justified",
-        NSTextAlignment.left : "left",
-        NSTextAlignment.right : "right",
-        NSTextAlignment.natural : "natural"
+        "Center" : NSTextAlignment.center,
+        "Justified" : NSTextAlignment.justified,
+        "Left" : NSTextAlignment.left,
+        "Right" : NSTextAlignment.right,
+        "Natural" : NSTextAlignment.natural
     ]
     
     static let textColorMapper = [
-        UIColor.black: "Black",
-        UIColor.red: "Red",
-        UIColor.blue: "Blue",
-        UIColor.magenta: "Magenta",
-        UIColor.brown: "Brown"
+        "Black" : UIColor.black,
+        "Red" : UIColor.red,
+        "Blue" : UIColor.blue,
+        "Magenta" : UIColor.magenta,
+        "Brown" : UIColor.brown
     ]
     
 }
