@@ -32,8 +32,8 @@
                             <action selector="showSettingsView:" destination="jXb-TI-gHg" eventType="touchUpInside" id="k5G-7s-KoB"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oleg Zhuckovich" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rds-p1-0TZ">
-                        <rect key="frame" x="102" y="14" width="157" height="28"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="rds-p1-0TZ">
+                        <rect key="frame" x="102" y="14" width="144" height="28"/>
                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                         <color key="textColor" red="0.15500280259999999" green="0.67293792959999998" blue="0.15611329669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>

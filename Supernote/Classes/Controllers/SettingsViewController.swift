@@ -15,7 +15,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var userPhoto: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var surnameTextField: UITextField!
-    @IBOutlet weak var activityTextField: UILabel!
+    @IBOutlet weak var activityTextField: UITextField!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var currentPasswordTextField: UITextField!
     @IBOutlet weak var newPasswordTextField: UITextField!
@@ -25,6 +25,9 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         guard let user = loggedInUser else { return }
+        if let userPhoto = user.photo {
+            setupUserPhoto(userPhoto)
+        }
         if !user.name.isEmpty {
             nameTextField.text = user.name
         }
@@ -37,8 +40,28 @@ class SettingsViewController: UIViewController {
         usernameLabel.text = "@" + user.username
     }
     
+    func setupUserPhoto(_ userPhotoData: Data) {
+        userPhoto.image = UIImage(data: userPhotoData,scale:1.0)
+        userPhoto.layer.borderWidth = 1.0
+        userPhoto.layer.masksToBounds = false
+        userPhoto.layer.borderColor = UIColor.white.cgColor
+        userPhoto.layer.cornerRadius = 50
+        userPhoto.clipsToBounds = true
+    }
+    
     @IBAction func saveChanges(_ sender: AnyObject) {
-        
+        let realm = try! Realm()
+        try! realm.write {
+            if !nameTextField.text!.isEmpty {
+                loggedInUser?.name = nameTextField.text!
+            }
+            if !surnameTextField.text!.isEmpty {
+                loggedInUser?.surname = surnameTextField.text!
+            }
+            if !activityTextField.text!.isEmpty {
+                loggedInUser?.activity = activityTextField.text!
+            }
+        }
     }
     
     @IBAction func deleteAccount(_ sender: AnyObject) {

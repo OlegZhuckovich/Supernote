@@ -23,10 +23,14 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == Constants.Cells.AdditionalCellNumber {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: R.nib.userCell, for: indexPath),
-                let username = loggedInUser?.username else { return UITableViewCell() }
-            cell.usernameLabel?.text = "@" + username
-            cell.activityLabel?.text = "Activity"
-            cell.notesLabel.text = notes?.count == 1 ? Constants.Cells.OneNoteLabel : "\(notes?.count) notes"
+                let user = loggedInUser else { return UITableViewCell() }
+            cell.nameSurnameLabel.text = (!user.name.isEmpty && !user.surname.isEmpty) ? user.name + " " + user.surname : "Name Surname"
+            cell.activityLabel.text = !user.activity.isEmpty ? user.activity : "Activity"
+            cell.usernameLabel?.text = "@" + user.username
+            cell.photoButton.setImage(UIImage(data: (loggedInUser?.photo)!,scale:1.0), for: .normal)
+            if let notes = notes {
+                cell.notesLabel.text = notes.count == 1 ? Constants.Cells.OneNoteLabel : "\(notes.count) notes"
+            }
             return cell
         } else {
             let cell = tableView.defaultCellWithReuseID(Constants.Cells.ReuseID)

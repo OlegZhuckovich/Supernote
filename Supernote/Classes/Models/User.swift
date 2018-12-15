@@ -15,6 +15,7 @@ class User: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var surname: String = ""
     @objc dynamic var activity: String = ""
+    @objc dynamic var photo: Data? = nil
     let notes = List<Note>()
     
     required init() {

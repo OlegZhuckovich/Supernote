@@ -597,13 +597,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Oleg" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e69-IT-9JU">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e69-IT-9JU">
                                 <rect key="frame" x="150" y="50" width="225" height="48"/>
                                 <color key="textColor" red="0.15686274510000001" green="0.67450980390000004" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Zhuckovich" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gI-q6-LHo">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gI-q6-LHo">
                                 <rect key="frame" x="150" y="98" width="225" height="48"/>
                                 <gestureRecognizers/>
                                 <color key="textColor" red="0.15500280261039734" green="0.67293792963027954" blue="0.15611329674720764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -736,7 +736,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityTextField" destination="qkO-Kg-3xc" id="ADe-Yb-pa0"/>
+                        <outlet property="activityTextField" destination="Qxq-cW-ozK" id="FbK-xF-sRl"/>
                         <outlet property="confirmNewPasswordTextField" destination="1VZ-63-C2v" id="FqO-KY-kFE"/>
                         <outlet property="currentPasswordTextField" destination="S7Y-1R-uio" id="gb2-CE-oHd"/>
                         <outlet property="nameTextField" destination="e69-IT-9JU" id="juQ-Wd-Jka"/>

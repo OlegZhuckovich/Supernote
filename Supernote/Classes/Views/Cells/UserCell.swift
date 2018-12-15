@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import ImagePicker
 import IQKeyboardManagerSwift
+import RealmSwift
 
 class UserCell: UITableViewCell, ImagePickerDelegate {
     
@@ -23,6 +24,7 @@ class UserCell: UITableViewCell, ImagePickerDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
     
     @IBAction func showSettingsView(_ sender: Any) {
         guard let homeViewController = self.superview?.parentContainerViewController() as? HomeViewController else { return }
@@ -67,6 +69,15 @@ class UserCell: UITableViewCell, ImagePickerDelegate {
     }
     
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        guard let homeViewController = self.superview?.parentContainerViewController() as? HomeViewController else { return }
+        
+        //UIImage(data:imageData,scale:1.0)
+        
+        let realm = try! Realm()
+        try! realm.write {
+            homeViewController.loggedInUser?.photo = Data(UIImageJPEGRepresentation(images.first!, 0.9)!)
+        }
+        
     
         photoButton.setImage(images.first, for: .normal)
         imagePicker.dismiss(animated: true, completion: nil)
