@@ -26,6 +26,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         notesTableView.register(R.nib.userCell)
+        self.hideKeyboardWhenTappedAround() 
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.onNewNoteCreated), name: NSNotification.Name(rawValue: notificationNewNoteCreated), object: nil)
     }
 
@@ -54,8 +56,6 @@ extension HomeViewController {
     }
 
     func updateTableViewVisibility() {
-        //emptyNotesImage.isHidden = (notes?.count)! > 0
-        //notesTableView.isHidden = !emptyNotesImage.isHidden
         emptyNotesImage.isHidden = true
         notesTableView.isHidden = false
     }

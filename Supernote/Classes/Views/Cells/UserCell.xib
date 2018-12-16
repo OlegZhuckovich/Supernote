@@ -18,13 +18,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuJ-tv-9h0">
-                        <rect key="frame" x="30" y="14" width="52" height="52"/>
-                        <state key="normal" image="btn_photo"/>
-                        <connections>
-                            <action selector="choosePhoto:" destination="jXb-TI-gHg" eventType="touchUpInside" id="96n-eA-uda"/>
-                        </connections>
-                    </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN6-EB-wUh">
                         <rect key="frame" x="310" y="15" width="50" height="50"/>
                         <state key="normal" image="btn_settings"/>
@@ -56,32 +49,38 @@
                         <color key="textColor" red="0.15500280259999999" green="0.67293792959999998" blue="0.15611329669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_photo" translatesAutoresizingMaskIntoConstraints="NO" id="d5z-h7-MfN">
+                        <rect key="frame" x="30" y="14" width="52" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="rYx-j1-ULp"/>
+                            <constraint firstAttribute="width" constant="52" id="uyL-yl-l9h"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="cMK-qb-qXj" firstAttribute="top" secondItem="VRY-PF-amz" secondAttribute="bottom" id="4bN-t4-QDL"/>
-                    <constraint firstItem="vuJ-tv-9h0" firstAttribute="centerY" secondItem="7Os-zD-2vZ" secondAttribute="centerY" id="73X-2e-e2X"/>
                     <constraint firstItem="VRY-PF-amz" firstAttribute="leading" secondItem="rds-p1-0TZ" secondAttribute="leading" id="9NP-Nd-ZbH"/>
-                    <constraint firstItem="rds-p1-0TZ" firstAttribute="top" secondItem="vuJ-tv-9h0" secondAttribute="top" id="BVx-n2-zaI"/>
                     <constraint firstItem="HN6-EB-wUh" firstAttribute="centerY" secondItem="7Os-zD-2vZ" secondAttribute="centerY" id="Dyq-c1-eJV"/>
                     <constraint firstItem="mFP-xr-3vd" firstAttribute="top" secondItem="VRY-PF-amz" secondAttribute="bottom" id="FoK-gL-MbJ"/>
                     <constraint firstItem="mFP-xr-3vd" firstAttribute="leading" secondItem="cMK-qb-qXj" secondAttribute="trailing" constant="15" id="Ku4-mw-1i6"/>
-                    <constraint firstItem="rds-p1-0TZ" firstAttribute="leading" secondItem="vuJ-tv-9h0" secondAttribute="trailing" constant="20" id="Rat-nb-XAl"/>
+                    <constraint firstItem="d5z-h7-MfN" firstAttribute="leading" secondItem="7Os-zD-2vZ" secondAttribute="leading" constant="30" id="Qh6-wQ-LRa"/>
+                    <constraint firstItem="d5z-h7-MfN" firstAttribute="centerY" secondItem="7Os-zD-2vZ" secondAttribute="centerY" id="VeX-0Y-0yU"/>
                     <constraint firstItem="VRY-PF-amz" firstAttribute="top" secondItem="rds-p1-0TZ" secondAttribute="bottom" id="YV3-j3-cne"/>
-                    <constraint firstItem="vuJ-tv-9h0" firstAttribute="centerY" secondItem="7Os-zD-2vZ" secondAttribute="centerY" id="ef7-UG-Yeq"/>
+                    <constraint firstItem="rds-p1-0TZ" firstAttribute="leading" secondItem="d5z-h7-MfN" secondAttribute="trailing" constant="20" id="cBq-5U-ACd"/>
                     <constraint firstAttribute="trailing" secondItem="HN6-EB-wUh" secondAttribute="trailing" constant="15" id="fUb-0C-ybi"/>
+                    <constraint firstItem="rds-p1-0TZ" firstAttribute="top" secondItem="d5z-h7-MfN" secondAttribute="top" id="kbW-FD-7XS"/>
                     <constraint firstItem="cMK-qb-qXj" firstAttribute="leading" secondItem="VRY-PF-amz" secondAttribute="leading" id="rhC-7Y-dsQ"/>
-                    <constraint firstItem="vuJ-tv-9h0" firstAttribute="leading" secondItem="7Os-zD-2vZ" secondAttribute="leading" constant="30" id="wH6-zh-Ssd"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="activityLabel" destination="cMK-qb-qXj" id="u10-dm-Rcz"/>
                 <outlet property="nameSurnameLabel" destination="rds-p1-0TZ" id="2gy-85-UiT"/>
                 <outlet property="notesLabel" destination="mFP-xr-3vd" id="z0a-HM-1aK"/>
-                <outlet property="photoButton" destination="vuJ-tv-9h0" id="ntQ-Zg-gVf"/>
+                <outlet property="photoView" destination="d5z-h7-MfN" id="deS-kG-LTQ"/>
                 <outlet property="settingsButton" destination="HN6-EB-wUh" id="IH4-cF-vbf"/>
                 <outlet property="usernameLabel" destination="VRY-PF-amz" id="6No-y5-b4r"/>
             </connections>
-            <point key="canvasLocation" x="120.8" y="-170.46476761619192"/>
+            <point key="canvasLocation" x="120.8" y="-170.91454272863569"/>
         </tableViewCell>
     </objects>
     <resources>

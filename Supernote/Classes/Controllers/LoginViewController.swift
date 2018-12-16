@@ -22,6 +22,11 @@ class LoginViewController: UIViewController {
         homeViewController.loggedInUser = self.loggedInUser
         return homeViewController
     }()
+    
+    override func viewDidLoad() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.hideKeyboardWhenTappedAround() 
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

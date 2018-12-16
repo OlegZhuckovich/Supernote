@@ -27,7 +27,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             cell.nameSurnameLabel.text = (!user.name.isEmpty && !user.surname.isEmpty) ? user.name + " " + user.surname : "Name Surname"
             cell.activityLabel.text = !user.activity.isEmpty ? user.activity : "Activity"
             cell.usernameLabel?.text = "@" + user.username
-            cell.photoButton.setImage(UIImage(data: (loggedInUser?.photo)!,scale:1.0), for: .normal)
             if let notes = notes {
                 cell.notesLabel.text = notes.count == 1 ? Constants.Cells.OneNoteLabel : "\(notes.count) notes"
             }

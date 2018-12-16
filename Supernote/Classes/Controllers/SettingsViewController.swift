@@ -38,6 +38,7 @@ class SettingsViewController: UIViewController {
             activityTextField.text = user.activity
         }
         usernameLabel.text = "@" + user.username
+        self.hideKeyboardWhenTappedAround() 
     }
     
     func setupUserPhoto(_ userPhotoData: Data) {
@@ -45,7 +46,7 @@ class SettingsViewController: UIViewController {
         userPhoto.layer.borderWidth = 1.0
         userPhoto.layer.masksToBounds = false
         userPhoto.layer.borderColor = UIColor.white.cgColor
-        userPhoto.layer.cornerRadius = 50
+        userPhoto.layer.cornerRadius = userPhoto.frame.height/2
         userPhoto.clipsToBounds = true
     }
     
@@ -61,6 +62,17 @@ class SettingsViewController: UIViewController {
             if !activityTextField.text!.isEmpty {
                 loggedInUser?.activity = activityTextField.text!
             }
+            
+            //currentPasswordTextField: UITextField!
+            //newPasswordTextField: UITextField!
+            //confirmNewPasswordTextField: UITextField!
+            
+            
+            
+            
+            
+            
+            
         }
     }
     

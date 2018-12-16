@@ -16,26 +16,34 @@ class UserCell: UITableViewCell, ImagePickerDelegate {
     
     @IBOutlet weak var nameSurnameLabel: UILabel!
     @IBOutlet weak var settingsButton: UIButton!
-    @IBOutlet weak var photoButton: UIButton!
+    @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var notesLabel: UILabel!
+    
+    override func layoutSubviews() {
+        guard let homeViewController = self.superview?.parentContainerViewController() as? HomeViewController else { return }
+        photoView.isUserInteractionEnabled = true
+        photoView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(photoViewTapped(tapGestureRecognizer:))))
+        if let user = homeViewController.loggedInUser, let userPhoto = user.photo {
+            setupPhotoView(userPhoto)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    @objc func photoViewTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        self.window?.rootViewController!.present(setupImagePicker(), animated: true, completion: nil)
+    }
     
     @IBAction func showSettingsView(_ sender: Any) {
         guard let homeViewController = self.superview?.parentContainerViewController() as? HomeViewController else { return }
         let settingsViewController = UIStoryboard.initializeViewController(SettingsViewController.self)
-        
         settingsViewController.loggedInUser = homeViewController.loggedInUser
         homeViewController.navigationController?.pushViewController(settingsViewController, animated: true)
-    }
-    
-    @IBAction func choosePhoto(_ sender: Any) {
-        self.window?.rootViewController!.present(setupImagePicker(), animated: true, completion: nil)
     }
     
     func setupImagePicker() -> ImagePickerController {
@@ -52,6 +60,15 @@ class UserCell: UITableViewCell, ImagePickerDelegate {
         return imagePicker
     }
     
+    func setupPhotoView(_ userPhoto: Data) {
+        photoView.image = UIImage(data: userPhoto, scale: 1.0)
+        photoView.layer.borderWidth = 1.0
+        photoView.layer.masksToBounds = false
+        photoView.layer.borderColor = UIColor.white.cgColor
+        photoView.layer.cornerRadius = photoView.frame.height/2
+        photoView.clipsToBounds = true
+        
+    }
     
     // MARK: - ImagePickerDelegate
     
@@ -61,28 +78,18 @@ class UserCell: UITableViewCell, ImagePickerDelegate {
     
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
         guard images.count > 0 else { return }
-        //            let lightboxImages = images.map {
-        //                return LightboxImage(image: $0)
-        //            }
-        //            let lightbox = LightboxController(images: lightboxImages, startIndex: 0)
-        //            imagePicker.present(lightbox, animated: true, completion: nil)
     }
     
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
         guard let homeViewController = self.superview?.parentContainerViewController() as? HomeViewController else { return }
-        
-        //UIImage(data:imageData,scale:1.0)
-        
         let realm = try! Realm()
         try! realm.write {
             homeViewController.loggedInUser?.photo = Data(UIImageJPEGRepresentation(images.first!, 0.9)!)
         }
-        
-    
-        photoButton.setImage(images.first, for: .normal)
+        if let user = homeViewController.loggedInUser, let userPhoto = user.photo {
+            setupPhotoView(userPhoto)
+        }
         imagePicker.dismiss(animated: true, completion: nil)
     }
-    
-    
     
 }

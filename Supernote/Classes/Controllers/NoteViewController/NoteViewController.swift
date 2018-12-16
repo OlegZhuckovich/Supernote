@@ -61,6 +61,7 @@ class NoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.alignHeightContraint.constant = 0
+        self.hideKeyboardWhenTappedAround() 
         setupNavigationButtons()
         setupBodyTextView()
         setupPickers()
